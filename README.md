@@ -179,6 +179,4 @@ Validation and alert if email already exists in the database
 
 ![47](https://github.com/bujakkristijan/food-ordering-app/assets/76042091/84a6ec13-2b36-4dab-b203-26a39ecff789)
 
-Registration design for mobile screen size
 
-![48](https://github.com/bujakkristijan/food-ordering-app/assets/76042091/9f52480d-5d50-4b00-a388-a36117da8088)
