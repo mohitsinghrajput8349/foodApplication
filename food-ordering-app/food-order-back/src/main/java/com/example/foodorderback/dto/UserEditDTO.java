@@ -18,7 +18,7 @@ public class UserEditDTO {
 	public UserEditDTO() {
 		
 	}
-	//mora isti redosled da bude kao u donjem konstruktoru
+   //just taking users as prameter and taking all tha coredentials from them
 	public UserEditDTO(User user) {
 		this.id = user.getId();
 		this.firstName = user.getFirstName();
