@@ -73,7 +73,8 @@ const CreateEmployeeComponent = () => {
           console.log(error);
         })
       }
-      //ako nije prosledjen id, radi se kreiranje novog
+
+        
       else{
         UserService.createEmployee(user).then((response) =>{
           console.log(response.data);
