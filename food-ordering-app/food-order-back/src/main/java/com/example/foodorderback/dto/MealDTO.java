@@ -9,6 +9,7 @@ public class MealDTO {
  	public Long id;
 	private MealType mealType;	
 // 	private String mealTypeName;
+	//simple mealDTO banaya hai usko database me dalna hia
  	private String name;
  	private int price;
  	private String image;
