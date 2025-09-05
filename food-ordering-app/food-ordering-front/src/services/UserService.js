@@ -23,12 +23,12 @@ class UserService{
         TokenService.setTokenInHeader();
         return axios.get("http://localhost:8080/api/user/" + employeeId);
     }
-    //moze i samo employee da se salje, ne mora i id
+   
     updateEmployee(employeeId, employee){
         TokenService.setTokenInHeader();
         return axios.put("http://localhost:8080/api/user/updateUserByIdAndDetails/" + employeeId, employee);
     }
-    //logicko brisanje, setuje se isDeleted na true
+
     deleteEmployee(employeeId){
         TokenService.setTokenInHeader();
         return axios.put("http://localhost:8080/api/user/deactivateUser/" + employeeId);
