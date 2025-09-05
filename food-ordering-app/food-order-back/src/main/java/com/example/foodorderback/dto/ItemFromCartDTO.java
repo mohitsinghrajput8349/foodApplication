@@ -5,16 +5,8 @@ import com.example.foodorderback.model.OrderItem;
 
 public class ItemFromCartDTO {
 	
-	//trebao sam cuvati trenutne vrednosti meal-a kada se kreira i cuva orderItem u bazi, a ne da cuvam samo meal_id u bazi
-	//jer ako se izmeni cena meal-a naknadno, izmenice se i vrednosti, npr cena za stare porudzbine !!!
-	//isto tako bolje da sam slao nazad varijable koje su mi neophodne (naziv, ime tipa itd.) 
-	//umesto ceo objekat sto saljem nazad na osnovu meal id-a
-	//takodje, najbolje bi bilo slati samo varijable klijentu, a ne objekte
-	//jer se onda ulancaju objekti prilikom slanja i previse nepotrebnih podataka se posalje, sto nije dobro sigurno
-	//o ovome nisam razmisljao na pocetku, pa je ostalo tako za sada
-	
-	//private Meal meal;
-//	private MealFromCartDTO mealFromCartDTO;
+// mujhe order item ko banaane aur database mein lgane par alg foood ke current price ko save rakhana chahiye tha, na ki keval food ki id ko database mein dalna, agar bhojan ki keemat baad mein badalti hai, to prices mein bhi diffrence hoga, jaise ki purane order ke liye keemat!!! isi tarah, behtar hota ki main imp variables (jaise name, type ka name ) ko wapas bhejtaa poorey object ko food ki id ke aadhaar par wapas bhejne ke bajaya isake alava, customer ko keval variables send krna sabse achcha hota, na ki objects kyonki is tarah objects ko bhejne par bevajah bahut saare data bheje jaate hain, jo nishchit roop se achchha nahi hai maine is baare mein shuru mein nahi socha, isliye ise abhi ke liye aise hi chhod diya gaya hai
+
 	private Long mealId;
 	private String mealName;
 	private String mealTypeName;
@@ -34,30 +26,13 @@ public class ItemFromCartDTO {
 		this.mealName = orderItem.getMealName();
 		this.mealTypeName = orderItem.getMealTypeName();
 		this.mealDescription = orderItem.getMealDescription();
-		//this.mealImage = orderItem.getMealImage();
-		// na ovaj nacin setujem sliku ako budem radio deployment jer necu da je cuvam u bazi svaki put prilikom kreiranja orderItema-a, uzimam iz meal objekta, jer ce se dosta memorije zauzimati verovatno
-		this.mealImage = orderItem.getMeal().getImage();
+			this.mealImage = orderItem.getMeal().getImage();
 		this.mealImageName = orderItem.getMealImageName();
 		this.mealPrice = orderItem.getMealPrice();
 		
 		this.quantity = orderItem.getQuantity();
 	}
-//
-//	public Meal getMeal() {
-//		return meal;
-//	}
-//
-//	public void setMeal(Meal meal) {
-//		this.meal = meal;
-//	}
 
-//	public MealFromCartDTO getMealFromCartDTO() {
-//		return mealFromCartDTO;
-//	}
-//
-//	public void setMealFromCartDTO(MealFromCartDTO mealFromCartDTO) {
-//		this.mealFromCartDTO = mealFromCartDTO;
-//	}
 
 	public int getQuantity() {
 		return quantity;
