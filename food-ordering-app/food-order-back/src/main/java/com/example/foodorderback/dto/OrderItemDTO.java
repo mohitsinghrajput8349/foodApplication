@@ -7,7 +7,7 @@ public class OrderItemDTO {
 	private List<ItemFromCartDTO> itemsFromCart;
 	private String address;
 	private String phoneNumber;
-	// mozda sam trebao double da cuvam umesto int
+	// may be int is not a good choice ...have to use double 
 	private int finalPrice;
 	
 	public int getFinalPrice() {
