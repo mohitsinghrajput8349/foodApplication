@@ -34,7 +34,7 @@ public class UserController {
 		if (!(responseToClient.equals("valid"))) {
 			return new ResponseEntity<String>(responseToClient, HttpStatus.OK);
 		}
-		//ako je uspesno sacuvan user, saveUser metoda vraca "success", ako nije vraca "fail";
+	
 		else {
 			responseToClient = userService.saveUser(user);
 			return new ResponseEntity<String>(responseToClient, HttpStatus.OK);
@@ -47,7 +47,7 @@ public class UserController {
 		if (!(responseToClient.equals("valid"))) {
 			return new ResponseEntity<String>(responseToClient, HttpStatus.OK);
 		}
-		//ako je uspesno sacuvan user, saveUser metoda vraca "success", ako nije vraca "fail";
+		
 		else {
 			responseToClient = userService.saveEmployee(user);
 			return new ResponseEntity<String>(responseToClient, HttpStatus.OK);
@@ -81,7 +81,7 @@ public class UserController {
 		if (userService.findOne(id) == null) {
 			return new ResponseEntity<String>(HttpStatus.NOT_FOUND);
 		}
-		// sa fronta se ne salje id i role, pa se ovde setuje
+
 		User user = userService.findOne(id);
 		employeeDetails.setId(user.getId());
 		employeeDetails.setRole(user.getRole());
@@ -109,7 +109,7 @@ public class UserController {
 	
 		return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.OK);
 	}
-	//mora bez consumes, jer se sad ne salje nikakav json objekat, vec samo id u putanji
+	
 	@RequestMapping(value = "/deactivateUser/{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> deactivateUser(@PathVariable Long id) {
 		if (userService.findOne(id) == null) {
