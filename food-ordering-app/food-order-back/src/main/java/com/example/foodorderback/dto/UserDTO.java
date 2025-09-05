@@ -21,12 +21,11 @@ public class UserDTO {
 	public UserDTO() {
 		
 	}
-	//mora isti redosled da bude kao u donjem konstruktoru
+	
 	public UserDTO(User user) {
 		this(user.getId(), user.getFirstName(), user.getLastName(),
 				user.getEmail(), user.getUsername(), user.getPassword(), user.getRole(), user.getAddress(), user.getPhoneNumber(), user.isDeleted());
 	}
-	//jedino password ne vraca na front
 	public UserDTO(Long id, String firstName,
 			String lastName, String email, String username, String password, Role role, String address, String phoneNumber, boolean deleted) {
 		this.id = id;
@@ -123,31 +122,5 @@ public class UserDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	/*
-	public String getUserAlreadyExist() {
-		return userAlreadyExist;
-	}
-
-	public void setUserAlreadyExist(String userAlreadyExist) {
-		this.userAlreadyExist = userAlreadyExist;
-	}
-
-	public String getUserAdded() {
-		return userAdded;
-	}
-
-	public void setUserAdded(String userAdded) {
-		this.userAdded = userAdded;
-	}
-
-	public String getUserInvalidInput() {
-		return userInvalidInput;
-	}
-
-	public void setUserInvalidInput(String userInvalidInput) {
-		this.userInvalidInput = userInvalidInput;
-	}
-	*/
-
 
 }
